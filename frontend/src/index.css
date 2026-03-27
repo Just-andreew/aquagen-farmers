@@ -1,0 +1,94 @@
+/* src/index.css */
+/* src/index.css */
+:root {
+  /* The bright spotlight (slightly softer so it blends better) */
+  --aquamarine-highlight: rgba(45, 212, 191, 0.25); 
+  
+  /* The new deep aquamarine background from your screenshot */
+  --bg-deep-aqua: #022b26;                        
+  
+  /* Other variables */
+  --aquamarine: #2dd4bf;   
+  --aquamarine-dark: #0f766e; 
+  --text-light: #f8fafc;   
+  --text-muted: #94a3b8;   
+  --border-color: #0f766e; /* Updated border to match the teal theme */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* The new gradient fading into the deep aquamarine */
+  background: radial-gradient(
+    circle at 60% 0%,                 /* Positioned top-center for a balanced glow */
+    var(--aquamarine-highlight) 0%,   
+    var(--bg-deep-aqua) 80%          /* Fades smoothly into the dark teal */
+  );
+  background-color: var(--bg-deep-aqua); /* Fallback color */
+  background-attachment: fixed;
+  min-height: 100vh; 
+  color: var(--text-light);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Let's also update the inputs to match your second screenshot better! */
+input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent background */
+  border: 1.5px solid var(--border-color);
+  color: var(--text-light);
+  font-size: 16px;
+  border-radius: 8px; /* Slightly sharper corners like your screenshot */
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--aquamarine);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  background-color: var(--bg-dark);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-light);
+  font-size: 18px;
+  border-radius: 12px; /* Softer, modern corners */
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--aquamarine); /* Glows aquamarine when typing */
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--aquamarine);
+  color: #f0f1f1; /* Very dark green/black text for maximum contrast on the bright button */
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  background-color: var(--aquamarine-dark);
+  color: var(--text-light);
+  transform: scale(0.98); /* Slight pressing animation */
+}
